@@ -9,21 +9,15 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func loadView() {
+    guard let emptyView = EmptyView.loadFromNib() as? EmptyView else { return }
 
-        // Do any additional setup after loading the view.
-    }
+    self.view = emptyView
+  }
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    // Do any additional setup after loading the view.
+  }
 }

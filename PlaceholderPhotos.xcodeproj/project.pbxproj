@@ -17,7 +17,9 @@
 		D12AE36C28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE36B28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift */; };
 		D12AE37B28C4A5E200090233 /* PlaceholderPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE37A28C4A5E200090233 /* PlaceholderPhoto.swift */; };
 		D12AE37F28C4A70900090233 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE37D28C4A70900090233 /* MainViewController.swift */; };
-		D12AE38028C4A70900090233 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D12AE37E28C4A70900090233 /* MainViewController.xib */; };
+		D16C447428C4C01F00893AFC /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16C447328C4C01F00893AFC /* EmptyView.xib */; };
+		D16C447628C4C22A00893AFC /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C447528C4C22A00893AFC /* EmptyView.swift */; };
+		D16C447928C509CD00893AFC /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C447828C509CD00893AFC /* UIView+Nib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,9 @@
 		D12AE36B28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D12AE37A28C4A5E200090233 /* PlaceholderPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhoto.swift; sourceTree = "<group>"; };
 		D12AE37D28C4A70900090233 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		D12AE37E28C4A70900090233 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		D16C447328C4C01F00893AFC /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		D16C447528C4C22A00893AFC /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		D16C447828C509CD00893AFC /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		D12AE34728C4A2AF00090233 /* PlaceholderPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				D16C447728C509A200893AFC /* Extensions */,
 				D12AE37928C4A57B00090233 /* Model */,
 				D12AE37828C4A56C00090233 /* ViewControllers */,
 				D12AE34828C4A2AF00090233 /* AppDelegate.swift */,
@@ -151,10 +156,27 @@
 		D12AE37C28C4A6F600090233 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D16C447228C4BFEE00893AFC /* View */,
 				D12AE37D28C4A70900090233 /* MainViewController.swift */,
-				D12AE37E28C4A70900090233 /* MainViewController.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		D16C447228C4BFEE00893AFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D16C447328C4C01F00893AFC /* EmptyView.xib */,
+				D16C447528C4C22A00893AFC /* EmptyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D16C447728C509A200893AFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D16C447828C509CD00893AFC /* UIView+Nib.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D16C447428C4C01F00893AFC /* EmptyView.xib in Resources */,
 				D12AE35528C4A2B400090233 /* LaunchScreen.storyboard in Resources */,
 				D12AE35228C4A2B400090233 /* Assets.xcassets in Resources */,
-				D12AE38028C4A70900090233 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +314,9 @@
 				D12AE34928C4A2AF00090233 /* AppDelegate.swift in Sources */,
 				D12AE37B28C4A5E200090233 /* PlaceholderPhoto.swift in Sources */,
 				D12AE34B28C4A2AF00090233 /* SceneDelegate.swift in Sources */,
+				D16C447628C4C22A00893AFC /* EmptyView.swift in Sources */,
 				D12AE37F28C4A70900090233 /* MainViewController.swift in Sources */,
+				D16C447928C509CD00893AFC /* UIView+Nib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
