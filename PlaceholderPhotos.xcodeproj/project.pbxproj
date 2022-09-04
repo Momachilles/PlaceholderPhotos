@@ -16,6 +16,7 @@
 		D12AE36028C4A2B400090233 /* PlaceholderPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE35F28C4A2B400090233 /* PlaceholderPhotosTests.swift */; };
 		D12AE36A28C4A2B400090233 /* PlaceholderPhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE36928C4A2B400090233 /* PlaceholderPhotosUITests.swift */; };
 		D12AE36C28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE36B28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift */; };
+		D12AE37B28C4A5E200090233 /* PlaceholderPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE37A28C4A5E200090233 /* PlaceholderPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D12AE36528C4A2B400090233 /* PlaceholderPhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceholderPhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12AE36928C4A2B400090233 /* PlaceholderPhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotosUITests.swift; sourceTree = "<group>"; };
 		D12AE36B28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D12AE37A28C4A5E200090233 /* PlaceholderPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,8 @@
 		D12AE34728C4A2AF00090233 /* PlaceholderPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				D12AE37928C4A57B00090233 /* Model */,
+				D12AE37828C4A56C00090233 /* ViewControllers */,
 				D12AE34828C4A2AF00090233 /* AppDelegate.swift */,
 				D12AE34A28C4A2AF00090233 /* SceneDelegate.swift */,
 				D12AE34C28C4A2AF00090233 /* ViewController.swift */,
@@ -125,6 +129,21 @@
 				D12AE36B28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift */,
 			);
 			path = PlaceholderPhotosUITests;
+			sourceTree = "<group>";
+		};
+		D12AE37828C4A56C00090233 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D12AE37928C4A57B00090233 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D12AE37A28C4A5E200090233 /* PlaceholderPhoto.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +279,7 @@
 			files = (
 				D12AE34D28C4A2AF00090233 /* ViewController.swift in Sources */,
 				D12AE34928C4A2AF00090233 /* AppDelegate.swift in Sources */,
+				D12AE37B28C4A5E200090233 /* PlaceholderPhoto.swift in Sources */,
 				D12AE34B28C4A2AF00090233 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
