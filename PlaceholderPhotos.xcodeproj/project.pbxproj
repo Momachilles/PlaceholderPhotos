@@ -19,6 +19,8 @@
 		D16C447428C4C01F00893AFC /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16C447328C4C01F00893AFC /* EmptyView.xib */; };
 		D16C447628C4C22A00893AFC /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C447528C4C22A00893AFC /* EmptyView.swift */; };
 		D16C447928C509CD00893AFC /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C447828C509CD00893AFC /* UIView+Nib.swift */; };
+		D16C447D28C5139D00893AFC /* PlaceholderPhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C447C28C5139D00893AFC /* PlaceholderPhotoListView.swift */; };
+		D16C447F28C513B700893AFC /* PlaceholderPhotoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16C447E28C513B700893AFC /* PlaceholderPhotoListView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		D16C447328C4C01F00893AFC /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		D16C447528C4C22A00893AFC /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		D16C447828C509CD00893AFC /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		D16C447C28C5139D00893AFC /* PlaceholderPhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotoListView.swift; sourceTree = "<group>"; };
+		D16C447E28C513B700893AFC /* PlaceholderPhotoListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderPhotoListView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		D12AE37C28C4A6F600090233 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D16C448028C5168200893AFC /* ViewModel */,
 				D16C447228C4BFEE00893AFC /* View */,
 				D12AE37D28C4A70900090233 /* MainViewController.swift */,
 			);
@@ -164,6 +169,8 @@
 			children = (
 				D16C447328C4C01F00893AFC /* EmptyView.xib */,
 				D16C447528C4C22A00893AFC /* EmptyView.swift */,
+				D16C447C28C5139D00893AFC /* PlaceholderPhotoListView.swift */,
+				D16C447E28C513B700893AFC /* PlaceholderPhotoListView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +181,13 @@
 				D16C447828C509CD00893AFC /* UIView+Nib.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D16C448028C5168200893AFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16C447428C4C01F00893AFC /* EmptyView.xib in Resources */,
+				D16C447F28C513B700893AFC /* PlaceholderPhotoListView.xib in Resources */,
 				D12AE35528C4A2B400090233 /* LaunchScreen.storyboard in Resources */,
 				D12AE35228C4A2B400090233 /* Assets.xcassets in Resources */,
 			);
@@ -310,6 +325,7 @@
 				D12AE34928C4A2AF00090233 /* AppDelegate.swift in Sources */,
 				D12AE37B28C4A5E200090233 /* PlaceholderPhoto.swift in Sources */,
 				D12AE34B28C4A2AF00090233 /* SceneDelegate.swift in Sources */,
+				D16C447D28C5139D00893AFC /* PlaceholderPhotoListView.swift in Sources */,
 				D16C447628C4C22A00893AFC /* EmptyView.swift in Sources */,
 				D12AE37F28C4A70900090233 /* MainViewController.swift in Sources */,
 				D16C447928C509CD00893AFC /* UIView+Nib.swift in Sources */,

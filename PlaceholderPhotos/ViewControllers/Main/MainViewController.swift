@@ -10,9 +10,10 @@ import UIKit
 class MainViewController: UIViewController {
 
   override func loadView() {
-    guard let emptyView = EmptyView.loadFromNib() as? EmptyView else { return }
+    // guard let emptyView = EmptyView.loadFromNib() as? EmptyView else { return }
+    guard let listView = PlaceholderPhotoListView.loadFromNib() as? PlaceholderPhotoListView else { return }
 
-    self.view = emptyView
+    self.view = listView // emptyView
   }
 
   override func viewDidLoad() {
