@@ -9,6 +9,6 @@ import Foundation
 
 typealias APIProtocol = RequestProtocol & ResponseProtocol
 
-protocol RequestProtocol {  
-  func request(from endpoint: Endpoint) -> URLRequest?
+protocol RequestProtocol {
+  var request: URLRequest? { get }
 }

@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol ResponseProtocol where T: Decodable {
-  associatedtype T
+protocol ResponseProtocol where ResponseType: Decodable {
+  associatedtype ResponseType
   
-  func decode(data: Data) throws -> T
+  func decode(data: Data) throws -> ResponseType
 }
 
 extension ResponseProtocol {
-  func decode(data: Data) throws -> T {
-    try JSONDecoder().decode(T.self, from: data)
+  func decode(data: Data) throws -> ResponseType {
+    try JSONDecoder().decode(ResponseType.self, from: data)
   }
 }

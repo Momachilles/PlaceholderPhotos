@@ -7,12 +7,14 @@
 
 import Foundation
 
-class PhotosRequest: RequestProtocol, ResponseProtocol {
-  typealias T = [PlaceholderPhoto]
-  
-  func request(from endpoint: Endpoint) -> URLRequest? {
-    URLRequestFactory().withEndpoint(endpoint: endpoint).create()
+class PhotosRequest: RequestProtocol {
+  var request: URLRequest? {
+    URLRequestFactory().withEndpoint(endpoint: PhotosEndpoint()).create()
   }
+}
+
+extension PhotosRequest: ResponseProtocol {
+  typealias ResponseType = [PlaceholderPhoto]
 }
 
 

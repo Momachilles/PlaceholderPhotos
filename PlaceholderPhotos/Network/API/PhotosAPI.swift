@@ -11,6 +11,14 @@ class PhotosAPI {
   
   func photos(completion: @escaping ([PlaceholderPhoto]?) -> ()) throws {
     let photosRequest = PhotosRequest()
-    print(photosRequest.request(from: PhotosEndpoint()) as Any)
+
+    try? NetworkClient(apiRequest: photosRequest).fetch { photos, error in
+      if let error = error {
+        print(error)
+      }
+      else {
+        print(photos)
+      }
+    }
   }
 }
