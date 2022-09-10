@@ -9,7 +9,7 @@ import Foundation
 
 class PhotosAPI {
   
-  func photos(completion: @escaping ([PlaceholderPhoto]?) -> ()) throws {
+  func photos(completion: @escaping ([PlaceholderPhoto]) -> ()) throws {
     let photosRequest = PhotosRequest()
 
     try? NetworkClient(apiRequest: photosRequest).fetch { photos, error in
@@ -17,7 +17,7 @@ class PhotosAPI {
         print(error)
       }
       else {
-        print(photos)
+        if let photos = photos { completion(photos) } // Error if .none
       }
     }
   }
