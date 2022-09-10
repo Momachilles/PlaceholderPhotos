@@ -7,4 +7,8 @@
 
 import UIKit
 
-class PlaceholderPhotoListView: UIView { }
+class PlaceholderPhotoListView: UIView {
+  
+  weak var delegate: (UITableViewDelegate & UITableViewDataSource)?
+  
+}

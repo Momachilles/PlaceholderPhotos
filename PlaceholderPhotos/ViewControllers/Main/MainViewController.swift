@@ -20,5 +20,10 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
+    do {
+      try PhotosAPI().photos { photos in print(photos) }
+    } catch {
+      print(error)
+    }
   }
 }
