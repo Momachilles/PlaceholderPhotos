@@ -41,6 +41,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="placeholderPhotoImageView" destination="GRY-Ki-7sM" id="xwp-gk-OVh"/>
+                <outlet property="placeholderPhotoLabel" destination="Z7e-Lf-bob" id="VWW-aV-a2N"/>
+            </connections>
             <point key="canvasLocation" x="147.82608695652175" y="80.357142857142847"/>
         </tableViewCell>
     </objects>

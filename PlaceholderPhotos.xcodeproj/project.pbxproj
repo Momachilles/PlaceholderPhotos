@@ -37,6 +37,7 @@
 		D16C447F28C513B700893AFC /* PlaceholderPhotoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16C447E28C513B700893AFC /* PlaceholderPhotoListView.xib */; };
 		D198911428CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911228CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.swift */; };
 		D198911528CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D198911328CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib */; };
+		D198911728CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911628CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		D16C447E28C513B700893AFC /* PlaceholderPhotoListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderPhotoListView.xib; sourceTree = "<group>"; };
 		D198911228CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		D198911328CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		D198911628CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotoTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +340,7 @@
 		D198910D28CDFD3300F0D28B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D198911628CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				D130241128CCA034007B546E /* NetworkError.swift in Sources */,
 				D198911428CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.swift in Sources */,
 				D130240928CC8076007B546E /* DevelopmentEnvironment.swift in Sources */,
+				D198911728CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift in Sources */,
 				D13023F528CBA60D007B546E /* NetworkClient.swift in Sources */,
 				D130241328CCD607007B546E /* UIImageView+Download.swift in Sources */,
 				D13023FB28CBAB84007B546E /* ResponseProtocol.swift in Sources */,

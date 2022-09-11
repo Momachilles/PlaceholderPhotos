@@ -9,15 +9,25 @@ import UIKit
 
 class PlaceholderPhotoTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+  @IBOutlet weak var placeholderPhotoImageView: UIImageView!
+  @IBOutlet weak var placeholderPhotoLabel: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+  var viewModel: PlaceholderPhotoTableViewCellViewModel? {
+    didSet {
+      placeholderPhotoImageView.image = viewModel?.image
+      placeholderPhotoLabel.text = viewModel?.text
+      layoutSubviews()
     }
+  }
+
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
+
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
     
+    // Configure the view for the selected state
+  }
 }
