@@ -39,12 +39,13 @@ class MainViewController: UIViewController {
     fetchPhotos()
   }
 
-  func fetchPhotos() {
+  func fetchPhotos(completion: (() -> ())? = .none) {
     try? mainViewModel.photos { [weak self] in
       guard let self = self else { return }
       DispatchQueue.main.async {
         let tableView = (self.view as? PlaceholderPhotoListView)?.placeholderPhotosTableView
         tableView?.reloadSections(IndexSet(integer: 0), with: .automatic)
+        completion?()
       }
     }
   }
@@ -78,5 +79,14 @@ extension MainViewController: UITableViewDelegate {
     let placeholderPhoto = mainViewModel.placeholderPhotos[indexPath.row]
     navigationController?.pushViewController(DetailViewController(viewModel: DetailViewModel(placeholderPhoto: placeholderPhoto)), animated: true)
     tableView.deselectRow(at: indexPath, animated: true)
+  }
+}
+
+extension MainViewController: PlaceholderPhotoListViewDelegate {
+
+  func placeholderPhotoListView(view: PlaceholderPhotoListView, refreshControlValueChanged: UIRefreshControl) {
+    fetchPhotos {
+      refreshControlValueChanged.endRefreshing()
+    }
   }
 }
