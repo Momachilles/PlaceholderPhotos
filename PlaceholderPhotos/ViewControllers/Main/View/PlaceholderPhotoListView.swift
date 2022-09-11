@@ -8,7 +8,18 @@
 import UIKit
 
 class PlaceholderPhotoListView: UIView {
-  
-  weak var delegate: (UITableViewDelegate & UITableViewDataSource)?
-  
+
+  @IBOutlet weak var placeholderPhotosTableView: UITableView! {
+    didSet {
+      placeholderPhotosTableView.rowHeight = UITableView.automaticDimension
+      placeholderPhotosTableView.estimatedRowHeight = 150
+    }
+  }
+
+  weak var delegate: (UITableViewDelegate & UITableViewDataSource)? {
+    didSet {
+      self.placeholderPhotosTableView.delegate = delegate
+      self.placeholderPhotosTableView.dataSource = delegate
+    }
+  }
 }
