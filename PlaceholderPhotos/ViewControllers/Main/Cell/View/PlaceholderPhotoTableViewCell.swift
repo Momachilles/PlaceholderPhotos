@@ -15,7 +15,7 @@ class PlaceholderPhotoTableViewCell: UITableViewCell {
   var viewModel: PlaceholderPhotoTableViewCellViewModel? {
     didSet {
       placeholderPhotoLabel.text = viewModel?.text
-      viewModel?.onDownloadedPhoto = { [weak self] in
+      viewModel?.onDownloadedImage = { [weak self] in
         guard let self = self else { return }
         self.placeholderPhotoImageView.image = self.viewModel?.image
       }

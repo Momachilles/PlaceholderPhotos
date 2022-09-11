@@ -11,36 +11,37 @@ import UIKit
 class PlaceholderPhotoTableViewCellViewModel {
 
   private let placeholderPhoto: PlaceholderPhoto
-  private var downloadedImage: UIImage?
+  private var downloadImageTask: URLSessionDataTask?
 
-  var image: UIImage? {
-    return downloadedImage
-  }
+  var image: UIImage?
 
   var text: String {
     placeholderPhoto.title
   }
 
-  var onDownloadedPhoto: (() -> Void)?
+  var onDownloadedImage: (() -> Void)?
 
   init(placeholderPhoto: PlaceholderPhoto) {
     self.placeholderPhoto = placeholderPhoto
 
     downloadImageFromThumbnailURL()
   }
+  
+  deinit {
+    if downloadImageTask?.state == .running {
+      downloadImageTask?.cancel()
+    }
+  }
 }
 
 extension PlaceholderPhotoTableViewCellViewModel {
   private func downloadImageFromThumbnailURL() {
-    guard let url = URL(string: placeholderPhoto.thumbnailUrl) else { return }
+    downloadImageTask = UIImage.imageFromServerURL(placeholderPhoto.thumbnailUrl) { [weak self] image, error in
+      guard let self = self else { return } // TODO: Error handling
+      if let error = error { print(error); return } // TODO: Error handling
 
-    DispatchQueue.global().async {
-      guard let data = try? Data(contentsOf: url) else { return }
-      DispatchQueue.main.async { [weak self] in
-        guard let self = self else { return }
-        self.downloadedImage = UIImage(data: data)
-        self.onDownloadedPhoto?()
-      }
+      self.image = image
+      self.onDownloadedImage?()
     }
   }
 }
