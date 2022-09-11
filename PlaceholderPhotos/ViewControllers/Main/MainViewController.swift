@@ -75,6 +75,8 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+    let placeholderPhoto = mainViewModel.placeholderPhotos[indexPath.row]
+    navigationController?.pushViewController(DetailViewController(viewModel: DetailViewModel(placeholderPhoto: placeholderPhoto)), animated: true)
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }
