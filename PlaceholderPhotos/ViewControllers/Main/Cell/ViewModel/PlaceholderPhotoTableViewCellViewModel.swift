@@ -13,7 +13,7 @@ class PlaceholderPhotoTableViewCellViewModel {
   private let placeholderPhoto: PlaceholderPhoto
   private var downloadImageTask: URLSessionDataTask?
 
-  var image: UIImage?
+  var image: UIImage? = UIImage(color: .lightGray.withAlphaComponent(0.1))
 
   var text: String {
     placeholderPhoto.title

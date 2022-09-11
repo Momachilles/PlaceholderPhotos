@@ -38,6 +38,7 @@
 		D198911528CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D198911328CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib */; };
 		D198911728CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911628CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift */; };
 		D198911928CE060B00F0D28B /* UIImage+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911828CE060B00F0D28B /* UIImage+Download.swift */; };
+		D198911B28CE2D6900F0D28B /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911A28CE2D6900F0D28B /* UIImage+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		D198911328CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderPhotoTableViewCell.xib; sourceTree = "<group>"; };
 		D198911628CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotoTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		D198911828CE060B00F0D28B /* UIImage+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Download.swift"; sourceTree = "<group>"; };
+		D198911A28CE2D6900F0D28B /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +310,7 @@
 				D16C447828C509CD00893AFC /* UIView+Nib.swift */,
 				D13023EE28CB9F01007B546E /* CustomStringConvertible+Codable.swift */,
 				D198911828CE060B00F0D28B /* UIImage+Download.swift */,
+				D198911A28CE2D6900F0D28B /* UIImage+Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				D13023F528CBA60D007B546E /* NetworkClient.swift in Sources */,
 				D13023FB28CBAB84007B546E /* ResponseProtocol.swift in Sources */,
 				D13023F928CBA941007B546E /* RequestProtocol.swift in Sources */,
+				D198911B28CE2D6900F0D28B /* UIImage+Color.swift in Sources */,
 				D13023EF28CB9F01007B546E /* CustomStringConvertible+Codable.swift in Sources */,
 				D16C447628C4C22A00893AFC /* EmptyView.swift in Sources */,
 				D12AE37F28C4A70900090233 /* MainViewController.swift in Sources */,

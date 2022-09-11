@@ -14,10 +14,13 @@ class PlaceholderPhotoTableViewCell: UITableViewCell {
 
   var viewModel: PlaceholderPhotoTableViewCellViewModel? {
     didSet {
+      placeholderPhotoImageView.image = viewModel?.image
       placeholderPhotoLabel.text = viewModel?.text
       viewModel?.onDownloadedImage = { [weak self] in
         guard let self = self else { return }
-        self.placeholderPhotoImageView.image = self.viewModel?.image
+        UIView.transition(with: self.placeholderPhotoImageView, duration: 0.7, options: .transitionCrossDissolve) {
+          self.placeholderPhotoImageView.image = self.viewModel?.image
+        }
       }
     }
   }
