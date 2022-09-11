@@ -12,7 +12,7 @@ class PlaceholderPhotoListView: UIView {
   @IBOutlet weak var placeholderPhotosTableView: UITableView! {
     didSet {
       placeholderPhotosTableView.rowHeight = UITableView.automaticDimension
-      placeholderPhotosTableView.estimatedRowHeight = 150
+      placeholderPhotosTableView.estimatedRowHeight = UITableView.automaticDimension
     }
   }
 

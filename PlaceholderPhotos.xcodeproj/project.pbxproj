@@ -39,6 +39,7 @@
 		D198911728CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911628CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift */; };
 		D198911928CE060B00F0D28B /* UIImage+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911828CE060B00F0D28B /* UIImage+Download.swift */; };
 		D198911B28CE2D6900F0D28B /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911A28CE2D6900F0D28B /* UIImage+Color.swift */; };
+		D198911D28CE38C000F0D28B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911C28CE38C000F0D28B /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		D198911628CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotoTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		D198911828CE060B00F0D28B /* UIImage+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Download.swift"; sourceTree = "<group>"; };
 		D198911A28CE2D6900F0D28B /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		D198911C28CE38C000F0D28B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 		D16C448028C5168200893AFC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D198911C28CE38C000F0D28B /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				D130240E28CC9CAB007B546E /* Reachability.swift in Sources */,
 				D12AE37B28C4A5E200090233 /* PlaceholderPhoto.swift in Sources */,
 				D12AE34B28C4A2AF00090233 /* SceneDelegate.swift in Sources */,
+				D198911D28CE38C000F0D28B /* MainViewModel.swift in Sources */,
 				D198911928CE060B00F0D28B /* UIImage+Download.swift in Sources */,
 				D130240428CC7B6E007B546E /* PhotosRequest.swift in Sources */,
 				D130240228CBB4E1007B546E /* PhotosAPI.swift in Sources */,

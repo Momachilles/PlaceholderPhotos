@@ -34,6 +34,8 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Z7e-Lf-bob" secondAttribute="trailing" constant="20" id="09l-Lx-IUB"/>
                     <constraint firstItem="Z7e-Lf-bob" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="7nY-v6-A7O"/>
+                    <constraint firstItem="GRY-Ki-7sM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Qij-Z1-Khp"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GRY-Ki-7sM" secondAttribute="bottom" constant="10" id="UD2-YL-MQV"/>
                     <constraint firstItem="Z7e-Lf-bob" firstAttribute="leading" secondItem="GRY-Ki-7sM" secondAttribute="trailing" constant="20" id="Xc1-i5-dVU"/>
                     <constraint firstAttribute="bottom" secondItem="Z7e-Lf-bob" secondAttribute="bottom" constant="20" id="frH-EI-Axa"/>
                     <constraint firstItem="GRY-Ki-7sM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="o5J-Bi-6X9"/>

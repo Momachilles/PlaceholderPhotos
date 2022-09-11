@@ -9,7 +9,16 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-  private var photos: [PlaceholderPhoto] = []
+  private let mainViewModel: MainViewModel
+
+  init(viewModel: MainViewModel) {
+    self.mainViewModel = viewModel
+    super.init(nibName: "MainViewController", bundle: Bundle(for: MainViewController.self))
+  }
+
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 
   override func loadView() {
     // guard let emptyView = EmptyView.loadFromNib() as? EmptyView else { return }
@@ -20,7 +29,7 @@ class MainViewController: UIViewController {
     guard let view = self.view as? PlaceholderPhotoListView else { return }
 
     view.delegate = self
-    view.placeholderPhotosTableView.register(UITableViewCell.self, forCellReuseIdentifier: "PhotoCellIdentifier")
+    view.placeholderPhotosTableView.register(UINib(nibName: "PlaceholderPhotoTableViewCell", bundle: .main), forCellReuseIdentifier: "PhotoCellIdentifier")
   }
 
   override func viewDidLoad() {
@@ -31,9 +40,8 @@ class MainViewController: UIViewController {
   }
 
   func fetchPhotos() {
-    try? PhotosAPI().photos { [weak self] photos in
+    try? mainViewModel.photos { [weak self] in
       guard let self = self else { return }
-      self.photos = photos
       DispatchQueue.main.async {
         let tableView = (self.view as? PlaceholderPhotoListView)?.placeholderPhotosTableView
         tableView?.reloadSections(IndexSet(integer: 0), with: .automatic)
@@ -44,34 +52,24 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    photos.count
+    mainViewModel.placeholderPhotos.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCellIdentifier") else { return UITableViewCell() }
-    let placeholderPhoto = self.photos[indexPath.row]
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCellIdentifier") as? PlaceholderPhotoTableViewCell else { return UITableViewCell() }
+    let placeholderPhoto = mainViewModel.placeholderPhotos[indexPath.row]
 
-    // Reset cell
-    cell.imageView?.image = .none
-    cell.textLabel?.text = .none
-    cell.detailTextLabel?.text = .none
-    cell.layoutSubviews()
+    // Reset content
+    /*
+     The table view's delegate in tableView(_:cellForRowAt:) should always reset all content when reusing a cell.
+     */
+    cell.placeholderPhotoImageView.image = .none
+    cell.placeholderPhotoLabel.text = .none
 
-    cell.textLabel?.numberOfLines = 0
-    cell.textLabel?.text = placeholderPhoto.title
-    cell.textLabel?.sizeToFit()
-    cell.detailTextLabel?.text = nil
-    cell.detailTextLabel?.sizeToFit()
-    cell.imageView?.imageFromServerURL(placeholderPhoto.thumbnailUrl, completion: { [weak cell] result, error in
-      if let error = error { print(error) }
-      cell?.layoutSubviews()
-    })
+    let viewModel = PlaceholderPhotoTableViewCellViewModel(placeholderPhoto: placeholderPhoto)
+    cell.viewModel = viewModel
 
     return cell
-  }
-
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    UITableView.automaticDimension
   }
 }
 
