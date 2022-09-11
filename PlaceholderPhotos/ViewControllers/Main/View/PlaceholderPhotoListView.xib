@@ -28,6 +28,9 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kXK-vA-hsq" secondAttribute="trailing" id="hdp-pZ-5eM"/>
                 <constraint firstItem="kXK-vA-hsq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jvm-l8-v8H"/>
             </constraints>
+            <connections>
+                <outlet property="placeholderPhotosTableView" destination="kXK-vA-hsq" id="rcj-Fh-cE2"/>
+            </connections>
             <point key="canvasLocation" x="139" y="129"/>
         </view>
     </objects>
