@@ -35,6 +35,8 @@
 		D16C447928C509CD00893AFC /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C447828C509CD00893AFC /* UIView+Nib.swift */; };
 		D16C447D28C5139D00893AFC /* PlaceholderPhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C447C28C5139D00893AFC /* PlaceholderPhotoListView.swift */; };
 		D16C447F28C513B700893AFC /* PlaceholderPhotoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16C447E28C513B700893AFC /* PlaceholderPhotoListView.xib */; };
+		D198911428CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911228CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.swift */; };
+		D198911528CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D198911328CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		D16C447828C509CD00893AFC /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		D16C447C28C5139D00893AFC /* PlaceholderPhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotoListView.swift; sourceTree = "<group>"; };
 		D16C447E28C513B700893AFC /* PlaceholderPhotoListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderPhotoListView.xib; sourceTree = "<group>"; };
+		D198911228CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		D198911328CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderPhotoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 		D12AE37C28C4A6F600090233 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D198910B28CDFCF900F0D28B /* Cell */,
 				D16C448028C5168200893AFC /* ViewModel */,
 				D16C447228C4BFEE00893AFC /* View */,
 				D12AE37D28C4A70900090233 /* MainViewController.swift */,
@@ -312,6 +317,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D198910B28CDFCF900F0D28B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D198910D28CDFD3300F0D28B /* ViewModel */,
+				D198910C28CDFD0800F0D28B /* View */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D198910C28CDFD0800F0D28B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D198911228CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.swift */,
+				D198911328CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D198910D28CDFD3300F0D28B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -418,6 +448,7 @@
 			files = (
 				D16C447428C4C01F00893AFC /* EmptyView.xib in Resources */,
 				D16C447F28C513B700893AFC /* PlaceholderPhotoListView.xib in Resources */,
+				D198911528CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib in Resources */,
 				D12AE35528C4A2B400090233 /* LaunchScreen.storyboard in Resources */,
 				D12AE35228C4A2B400090233 /* Assets.xcassets in Resources */,
 			);
@@ -454,6 +485,7 @@
 				D16C447D28C5139D00893AFC /* PlaceholderPhotoListView.swift in Sources */,
 				D130240628CC7F94007B546E /* Environment.swift in Sources */,
 				D130241128CCA034007B546E /* NetworkError.swift in Sources */,
+				D198911428CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.swift in Sources */,
 				D130240928CC8076007B546E /* DevelopmentEnvironment.swift in Sources */,
 				D13023F528CBA60D007B546E /* NetworkClient.swift in Sources */,
 				D130241328CCD607007B546E /* UIImageView+Download.swift in Sources */,
