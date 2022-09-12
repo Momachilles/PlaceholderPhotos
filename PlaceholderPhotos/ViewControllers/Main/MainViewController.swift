@@ -21,15 +21,9 @@ class MainViewController: UIViewController {
   }
 
   override func loadView() {
-    // guard let emptyView = EmptyView.loadFromNib() as? EmptyView else { return }
-    guard let listView = PlaceholderPhotoListView.loadFromNib() as? PlaceholderPhotoListView else { return }
+    guard let emptyView = EmptyView.loadFromNib() as? EmptyView else { return }
 
-    self.view = listView // emptyView
-
-    guard let view = self.view as? PlaceholderPhotoListView else { return }
-
-    view.delegate = self
-    view.placeholderPhotosTableView.register(UINib(nibName: "PlaceholderPhotoTableViewCell", bundle: .main), forCellReuseIdentifier: "PhotoCellIdentifier")
+    self.view = emptyView
   }
 
   override func viewDidLoad() {
@@ -42,12 +36,39 @@ class MainViewController: UIViewController {
   func fetchPhotos(completion: (() -> ())? = .none) {
     try? mainViewModel.photos { [weak self] in
       guard let self = self else { return }
-      DispatchQueue.main.async {
-        let tableView = (self.view as? PlaceholderPhotoListView)?.placeholderPhotosTableView
-        tableView?.reloadSections(IndexSet(integer: 0), with: .automatic)
-        completion?()
+      DispatchQueue.main.async { [weak self] in
+        guard let self = self else { return }
+        self.transitionToTableView {
+          self.reloadTable()
+          completion?()
+        }
       }
     }
+  }
+}
+
+extension MainViewController {
+  private func transitionToTableView(completion: (() -> ())?) {
+    guard let listView = PlaceholderPhotoListView.loadFromNib() as? PlaceholderPhotoListView else { return }
+    UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve, animations: {
+      self.view = listView
+    }, completion: { [weak self] _ in
+      guard let self = self else { return }
+      self.initTableView()
+      completion?()
+    })
+  }
+
+  private func initTableView() {
+    guard let view = self.view as? PlaceholderPhotoListView else { return }
+
+    view.delegate = self
+    view.placeholderPhotosTableView.register(UINib(nibName: "PlaceholderPhotoTableViewCell", bundle: .main), forCellReuseIdentifier: "PhotoCellIdentifier")
+  }
+
+  private func reloadTable() {
+    let tableView = (self.view as? PlaceholderPhotoListView)?.placeholderPhotosTableView
+    tableView?.reloadSections(IndexSet(integer: 0), with: .automatic)
   }
 }
 
