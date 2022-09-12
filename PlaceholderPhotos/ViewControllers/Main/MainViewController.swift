@@ -11,6 +11,10 @@ class MainViewController: UIViewController {
 
   private let mainViewModel: MainViewModel
 
+  private lazy var transitionView = UIView()
+  private var emptyView: EmptyView?
+  private var placeholderPhotoListView: PlaceholderPhotoListView?
+
   init(viewModel: MainViewModel) {
     self.mainViewModel = viewModel
     super.init(nibName: "MainViewController", bundle: Bundle(for: MainViewController.self))
@@ -22,14 +26,24 @@ class MainViewController: UIViewController {
 
   override func loadView() {
     guard let emptyView = EmptyView.loadFromNib() as? EmptyView else { return }
+    transitionView.frame = emptyView.frame
+    transitionView.addSubview(emptyView)
 
-    self.view = emptyView
+    guard let listView = PlaceholderPhotoListView.loadFromNib() as? PlaceholderPhotoListView else { return }
+    listView.isHidden = true
+    transitionView.addSubview(listView)
+
+    self.emptyView = emptyView
+    self.placeholderPhotoListView = listView
+
+    self.view = transitionView
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
+    initplaceholderPhotoListView()
     fetchPhotos()
   }
 
@@ -38,8 +52,8 @@ class MainViewController: UIViewController {
       guard let self = self else { return }
       DispatchQueue.main.async { [weak self] in
         guard let self = self else { return }
+        self.reloadTable()
         self.transitionToTableView {
-          self.reloadTable()
           completion?()
         }
       }
@@ -49,25 +63,23 @@ class MainViewController: UIViewController {
 
 extension MainViewController {
   private func transitionToTableView(completion: (() -> ())?) {
-    guard let listView = PlaceholderPhotoListView.loadFromNib() as? PlaceholderPhotoListView else { return }
-    UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve, animations: {
-      self.view = listView
+    UIView.transition(with: self.view, duration: 0.3, options: .transitionCrossDissolve, animations: {
+      self.placeholderPhotoListView?.isHidden = false
+      self.emptyView?.isHidden = true
     }, completion: { [weak self] _ in
       guard let self = self else { return }
-      self.initTableView()
+      self.emptyView?.removeFromSuperview()
       completion?()
     })
   }
 
-  private func initTableView() {
-    guard let view = self.view as? PlaceholderPhotoListView else { return }
-
-    view.delegate = self
-    view.placeholderPhotosTableView.register(UINib(nibName: "PlaceholderPhotoTableViewCell", bundle: .main), forCellReuseIdentifier: "PhotoCellIdentifier")
+  private func initplaceholderPhotoListView() {
+    self.placeholderPhotoListView?.delegate = self
+    self.placeholderPhotoListView?.placeholderPhotosTableView.register(UINib(nibName: "PlaceholderPhotoTableViewCell", bundle: .main), forCellReuseIdentifier: "PhotoCellIdentifier")
   }
 
   private func reloadTable() {
-    let tableView = (self.view as? PlaceholderPhotoListView)?.placeholderPhotosTableView
+    let tableView = self.placeholderPhotoListView?.placeholderPhotosTableView
     tableView?.reloadSections(IndexSet(integer: 0), with: .automatic)
   }
 }
@@ -106,8 +118,7 @@ extension MainViewController: UITableViewDelegate {
 extension MainViewController: PlaceholderPhotoListViewDelegate {
 
   func placeholderPhotoListView(view: PlaceholderPhotoListView, refreshControlValueChanged: UIRefreshControl) {
-    fetchPhotos {
-      refreshControlValueChanged.endRefreshing()
-    }
+    refreshControlValueChanged.endRefreshing()
+    reloadTable()
   }
 }
