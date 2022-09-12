@@ -16,6 +16,10 @@
 		D12AE36C28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE36B28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift */; };
 		D12AE37B28C4A5E200090233 /* PlaceholderPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE37A28C4A5E200090233 /* PlaceholderPhoto.swift */; };
 		D12AE37F28C4A70900090233 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE37D28C4A70900090233 /* MainViewController.swift */; };
+		D12E23AD28CFAB7F0041E673 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E23AC28CFAB7F0041E673 /* Coordinator.swift */; };
+		D12E23AF28CFAC720041E673 /* AppCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E23AE28CFAC720041E673 /* AppCordinator.swift */; };
+		D12E23B228CFC2090041E673 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E23B128CFC2090041E673 /* MainCoordinator.swift */; };
+		D12E23B628CFCD890041E673 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E23B528CFCD890041E673 /* DetailCoordinator.swift */; };
 		D13023EF28CB9F01007B546E /* CustomStringConvertible+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023EE28CB9F01007B546E /* CustomStringConvertible+Codable.swift */; };
 		D13023F228CBA0BA007B546E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023F128CBA0BA007B546E /* Endpoint.swift */; };
 		D13023F528CBA60D007B546E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023F428CBA60D007B546E /* NetworkClient.swift */; };
@@ -78,6 +82,10 @@
 		D12AE36B28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D12AE37A28C4A5E200090233 /* PlaceholderPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhoto.swift; sourceTree = "<group>"; };
 		D12AE37D28C4A70900090233 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D12E23AC28CFAB7F0041E673 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D12E23AE28CFAC720041E673 /* AppCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCordinator.swift; sourceTree = "<group>"; };
+		D12E23B128CFC2090041E673 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		D12E23B528CFCD890041E673 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		D13023EE28CB9F01007B546E /* CustomStringConvertible+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomStringConvertible+Codable.swift"; sourceTree = "<group>"; };
 		D13023F128CBA0BA007B546E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D13023F428CBA60D007B546E /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -157,6 +165,7 @@
 		D12AE34728C4A2AF00090233 /* PlaceholderPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				D12E23AB28CFAB520041E673 /* Coordinators */,
 				D13023EC28CB9AEF007B546E /* Network */,
 				D16C447728C509A200893AFC /* Extensions */,
 				D12AE37928C4A57B00090233 /* Model */,
@@ -207,12 +216,38 @@
 		D12AE37C28C4A6F600090233 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D12E23B028CFC1BB0041E673 /* Coordinator */,
 				D198910B28CDFCF900F0D28B /* Cell */,
 				D16C448028C5168200893AFC /* ViewModel */,
 				D16C447228C4BFEE00893AFC /* View */,
 				D12AE37D28C4A70900090233 /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		D12E23AB28CFAB520041E673 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D12E23AC28CFAB7F0041E673 /* Coordinator.swift */,
+				D12E23AE28CFAC720041E673 /* AppCordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D12E23B028CFC1BB0041E673 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D12E23B128CFC2090041E673 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D12E23B328CFCD5F0041E673 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D12E23B528CFCD890041E673 /* DetailCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		D13023EC28CB9AEF007B546E /* Network */ = {
@@ -365,6 +400,7 @@
 		D198911E28CE3D4A00F0D28B /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				D12E23B328CFCD5F0041E673 /* Coordinator */,
 				D198912828CE46B200F0D28B /* ViewModel */,
 				D198912328CE42A400F0D28B /* View */,
 				D198911F28CE3D8300F0D28B /* DetailViewController.swift */,
@@ -525,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12E23AF28CFAC720041E673 /* AppCordinator.swift in Sources */,
 				D12AE34928C4A2AF00090233 /* AppDelegate.swift in Sources */,
 				D13023F228CBA0BA007B546E /* Endpoint.swift in Sources */,
 				D130240E28CC9CAB007B546E /* Reachability.swift in Sources */,
@@ -533,6 +570,7 @@
 				D198911D28CE38C000F0D28B /* MainViewModel.swift in Sources */,
 				D198911928CE060B00F0D28B /* UIImage+Download.swift in Sources */,
 				D130240428CC7B6E007B546E /* PhotosRequest.swift in Sources */,
+				D12E23B628CFCD890041E673 /* DetailCoordinator.swift in Sources */,
 				D130240228CBB4E1007B546E /* PhotosAPI.swift in Sources */,
 				D16C447D28C5139D00893AFC /* PlaceholderPhotoListView.swift in Sources */,
 				D130240628CC7F94007B546E /* Environment.swift in Sources */,
@@ -543,6 +581,8 @@
 				D198911728CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift in Sources */,
 				D13023F528CBA60D007B546E /* NetworkClient.swift in Sources */,
 				D13023FB28CBAB84007B546E /* ResponseProtocol.swift in Sources */,
+				D12E23AD28CFAB7F0041E673 /* Coordinator.swift in Sources */,
+				D12E23B228CFC2090041E673 /* MainCoordinator.swift in Sources */,
 				D13023F928CBA941007B546E /* RequestProtocol.swift in Sources */,
 				D198912528CE432400F0D28B /* DetailView.swift in Sources */,
 				D198911B28CE2D6900F0D28B /* UIImage+Color.swift in Sources */,

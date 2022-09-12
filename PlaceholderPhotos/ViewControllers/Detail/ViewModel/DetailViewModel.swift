@@ -11,6 +11,7 @@ class DetailViewModel {
   private let placeholderPhoto: PlaceholderPhoto
   private var downloadImageTask: URLSessionDataTask?
 
+  var coordinator: DetailCoordinator
   var image: UIImage? = UIImage(color: .lightGray.withAlphaComponent(0.1))
 
   var text: String {
@@ -19,8 +20,9 @@ class DetailViewModel {
 
   var onDownloadedImage: (() -> Void)?
 
-  init(placeholderPhoto: PlaceholderPhoto) {
+  init(placeholderPhoto: PlaceholderPhoto, coordinator: DetailCoordinator) {
     self.placeholderPhoto = placeholderPhoto
+    self.coordinator = coordinator
 
     downloadImageFromURL()
   }
