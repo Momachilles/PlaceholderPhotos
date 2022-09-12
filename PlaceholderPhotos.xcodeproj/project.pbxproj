@@ -45,7 +45,6 @@
 		D198911B28CE2D6900F0D28B /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911A28CE2D6900F0D28B /* UIImage+Color.swift */; };
 		D198911D28CE38C000F0D28B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911C28CE38C000F0D28B /* MainViewModel.swift */; };
 		D198912128CE3D8300F0D28B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198911F28CE3D8300F0D28B /* DetailViewController.swift */; };
-		D198912228CE3D8300F0D28B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D198912028CE3D8300F0D28B /* DetailViewController.xib */; };
 		D198912528CE432400F0D28B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198912428CE432400F0D28B /* DetailView.swift */; };
 		D198912728CE433E00F0D28B /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D198912628CE433E00F0D28B /* DetailView.xib */; };
 		D198912A28CE46C600F0D28B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198912928CE46C600F0D28B /* DetailViewModel.swift */; };
@@ -111,7 +110,6 @@
 		D198911A28CE2D6900F0D28B /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		D198911C28CE38C000F0D28B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		D198911F28CE3D8300F0D28B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		D198912028CE3D8300F0D28B /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		D198912428CE432400F0D28B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D198912628CE433E00F0D28B /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		D198912928CE46C600F0D28B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -404,7 +402,6 @@
 				D198912828CE46B200F0D28B /* ViewModel */,
 				D198912328CE42A400F0D28B /* View */,
 				D198911F28CE3D8300F0D28B /* DetailViewController.swift */,
-				D198912028CE3D8300F0D28B /* DetailViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -531,7 +528,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16C447428C4C01F00893AFC /* EmptyView.xib in Resources */,
-				D198912228CE3D8300F0D28B /* DetailViewController.xib in Resources */,
 				D16C447F28C513B700893AFC /* PlaceholderPhotoListView.xib in Resources */,
 				D198911528CDFE7000F0D28B /* PlaceholderPhotoTableViewCell.xib in Resources */,
 				D12AE35528C4A2B400090233 /* LaunchScreen.storyboard in Resources */,

@@ -28,17 +28,23 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hhg-Eh-Jse">
+                    <rect key="frame" x="188.5" y="175.5" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="OTp-Vs-uMl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="3oi-tq-mMu"/>
+                <constraint firstItem="hhg-Eh-Jse" firstAttribute="centerX" secondItem="OTp-Vs-uMl" secondAttribute="centerX" id="63v-0v-rHE"/>
                 <constraint firstItem="OTp-Vs-uMl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="C3F-Cj-FFZ"/>
                 <constraint firstItem="HKx-jH-i3U" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="CI8-1d-ZZJ"/>
                 <constraint firstItem="HKx-jH-i3U" firstAttribute="top" secondItem="OTp-Vs-uMl" secondAttribute="bottom" constant="50" id="bM4-9f-0Ny"/>
+                <constraint firstItem="hhg-Eh-Jse" firstAttribute="centerY" secondItem="OTp-Vs-uMl" secondAttribute="centerY" id="fwl-WG-pbs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HKx-jH-i3U" secondAttribute="trailing" constant="50" id="k27-Us-De4"/>
             </constraints>
             <connections>
+                <outlet property="activityIndicatorView" destination="hhg-Eh-Jse" id="Fpp-bG-T83"/>
                 <outlet property="detailImageView" destination="OTp-Vs-uMl" id="dow-Yn-AYA"/>
                 <outlet property="detailLabel" destination="HKx-jH-i3U" id="EuL-V5-IFx"/>
             </connections>
