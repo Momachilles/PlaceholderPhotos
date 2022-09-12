@@ -15,12 +15,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the empty view. you can add some text, a HUD, or even a skeleton." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNE-mO-5oV">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the empty view. you can add some text, a HUD, or even a skeleton." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNE-mO-5oV">
                     <rect key="frame" x="50" y="355" width="314" height="186.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="39"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="j9f-rc-jCf">
+                    <rect key="frame" x="188.5" y="268" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -28,6 +31,8 @@
                 <constraint firstItem="kNE-mO-5oV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BKt-os-ZWP"/>
                 <constraint firstItem="kNE-mO-5oV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="C0w-8c-6LL"/>
                 <constraint firstItem="kNE-mO-5oV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="beW-rs-7dP"/>
+                <constraint firstItem="kNE-mO-5oV" firstAttribute="top" secondItem="j9f-rc-jCf" secondAttribute="bottom" constant="50" id="mT0-Ww-ImT"/>
+                <constraint firstItem="j9f-rc-jCf" firstAttribute="centerX" secondItem="kNE-mO-5oV" secondAttribute="centerX" id="wiA-3z-EOZ"/>
             </constraints>
             <point key="canvasLocation" x="139" y="108"/>
         </view>
