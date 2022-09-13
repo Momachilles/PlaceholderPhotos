@@ -13,6 +13,9 @@ class DetailViewModel {
 
   var coordinator: DetailCoordinator
   var image: UIImage? = UIImage(color: .lightGray.withAlphaComponent(0.1))
+  var title: String { // Could be localized
+    "Placeholder Photo Detail"
+  }
 
   var text: String {
     placeholderPhoto.title

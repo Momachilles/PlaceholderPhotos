@@ -43,6 +43,7 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
+    self.title = mainViewModel.title
     initplaceholderPhotoListView()
     fetchPhotos { [weak self] in
       guard let self = self else { return }

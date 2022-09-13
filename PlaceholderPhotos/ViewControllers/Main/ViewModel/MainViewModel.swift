@@ -11,6 +11,10 @@ class MainViewModel {
   weak var coordinator: MainCoordinator?
   var placeholderPhotos: [PlaceholderPhoto] = []
 
+  var title: String { // Could be localized
+    "Placeholder Photos List"
+  }
+
   init(coordinator: MainCoordinator, networkClient: NetworkClient) {
     self.coordinator = coordinator
     self.networkClient = networkClient
