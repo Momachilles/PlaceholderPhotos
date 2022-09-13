@@ -9,16 +9,16 @@ import Foundation
 
 class PhotosAPI: NetworkAPI {
 
-  private var networkClient: NetworkClient
+  var networkClient: NetworkClient?
 
-  required init(client: NetworkClient) {
-    self.networkClient = client
+  init(networkClient: NetworkClient) {
+    self.networkClient = networkClient
   }
 
   func photos(completion: @escaping ([PlaceholderPhoto]?, Error?) -> ()) {
     let photosRequest = PhotosRequest()
 
-    networkClient.fetch(apiRequest: photosRequest) { photos, error in
+    networkClient?.fetch(apiRequest: photosRequest) { photos, error in
       completion(photos, error)
     }
   }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NetworkAPI {
-  init(client: NetworkClient)
+  var networkClient: NetworkClient? { get set }
 }
