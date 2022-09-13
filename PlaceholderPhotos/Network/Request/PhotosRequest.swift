@@ -7,13 +7,13 @@
 
 import Foundation
 
-class PhotosRequest: RequestProtocol {
+class PhotosRequest: Request {
   var request: URLRequest? {
     URLRequestFactory().withEndpoint(endpoint: PhotosEndpoint()).create()
   }
 }
 
-extension PhotosRequest: ResponseProtocol {
+extension PhotosRequest: Response {
   typealias ResponseType = [PlaceholderPhoto]
 }
 

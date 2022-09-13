@@ -1,5 +1,5 @@
 //
-//  RequestProtocol.swift
+//  Request.swift
 //  PlaceholderPhotos
 //
 //  Created by David Alarcon on 9/9/22.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-typealias APIProtocol = RequestProtocol & ResponseProtocol
+typealias APIRequest = Request & Response
 
-protocol RequestProtocol {
+protocol Request {
   var request: URLRequest? { get }
 }

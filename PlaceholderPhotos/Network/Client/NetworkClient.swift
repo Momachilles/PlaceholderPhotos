@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NetworkFetch {
-  func fetch<T: APIProtocol>(apiRequest: T, completion: @escaping (T.ResponseType?, Error?) -> ())
+  func fetch<T: APIRequest>(apiRequest: T, completion: @escaping (T.ResponseType?, Error?) -> ())
 }
 
 class NetworkClient: NetworkFetch {
@@ -25,7 +25,7 @@ class NetworkClient: NetworkFetch {
     }
   }
 
-  func fetch<T: APIProtocol>(apiRequest: T, completion: @escaping (T.ResponseType?, Error?) -> ()) {
+  func fetch<T: APIRequest>(apiRequest: T, completion: @escaping (T.ResponseType?, Error?) -> ()) {
     // check network status
     // guard reachability.connection == .unavailable else { return completion (.none, NetworkError.noNetworkConnection) }
     guard let request = apiRequest.request else { return completion (.none, NetworkError.invalidRequest) }

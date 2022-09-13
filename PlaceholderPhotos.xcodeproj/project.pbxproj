@@ -25,8 +25,8 @@
 		D13023EF28CB9F01007B546E /* CustomStringConvertible+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023EE28CB9F01007B546E /* CustomStringConvertible+Codable.swift */; };
 		D13023F228CBA0BA007B546E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023F128CBA0BA007B546E /* Endpoint.swift */; };
 		D13023F528CBA60D007B546E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023F428CBA60D007B546E /* NetworkClient.swift */; };
-		D13023F928CBA941007B546E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023F828CBA941007B546E /* RequestProtocol.swift */; };
-		D13023FB28CBAB84007B546E /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023FA28CBAB84007B546E /* ResponseProtocol.swift */; };
+		D13023F928CBA941007B546E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023F828CBA941007B546E /* Request.swift */; };
+		D13023FB28CBAB84007B546E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023FA28CBAB84007B546E /* Response.swift */; };
 		D13023FF28CBB08C007B546E /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13023FE28CBB08C007B546E /* URLRequestFactory.swift */; };
 		D130240228CBB4E1007B546E /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130240128CBB4E1007B546E /* PhotosAPI.swift */; };
 		D130240428CC7B6E007B546E /* PhotosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130240328CC7B6E007B546E /* PhotosRequest.swift */; };
@@ -36,6 +36,7 @@
 		D130240E28CC9CAB007B546E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130240D28CC9CAB007B546E /* Reachability.swift */; };
 		D130241128CCA034007B546E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130241028CCA034007B546E /* NetworkError.swift */; };
 		D130B3A628D0E578008B4292 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130B3A528D0E578008B4292 /* NetworkAPI.swift */; };
+		D130B3A928D0FB74008B4292 /* MainViewController+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130B3A828D0FB74008B4292 /* MainViewController+Delegates.swift */; };
 		D16C447428C4C01F00893AFC /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16C447328C4C01F00893AFC /* EmptyView.xib */; };
 		D16C447628C4C22A00893AFC /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C447528C4C22A00893AFC /* EmptyView.swift */; };
 		D16C447928C509CD00893AFC /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C447828C509CD00893AFC /* UIView+Nib.swift */; };
@@ -93,8 +94,8 @@
 		D13023EE28CB9F01007B546E /* CustomStringConvertible+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomStringConvertible+Codable.swift"; sourceTree = "<group>"; };
 		D13023F128CBA0BA007B546E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D13023F428CBA60D007B546E /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		D13023F828CBA941007B546E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
-		D13023FA28CBAB84007B546E /* ResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
+		D13023F828CBA941007B546E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		D13023FA28CBAB84007B546E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		D13023FE28CBB08C007B546E /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
 		D130240128CBB4E1007B546E /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
 		D130240328CC7B6E007B546E /* PhotosRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRequest.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 		D130240D28CC9CAB007B546E /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D130241028CCA034007B546E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D130B3A528D0E578008B4292 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		D130B3A828D0FB74008B4292 /* MainViewController+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Delegates.swift"; sourceTree = "<group>"; };
 		D16C447328C4C01F00893AFC /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		D16C447528C4C22A00893AFC /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		D16C447828C509CD00893AFC /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		D12AE37C28C4A6F600090233 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D130B3A728D0FB36008B4292 /* Delegates */,
 				D12E23B028CFC1BB0041E673 /* Coordinator */,
 				D198910B28CDFCF900F0D28B /* Cell */,
 				D16C448028C5168200893AFC /* ViewModel */,
@@ -299,7 +302,7 @@
 		D13023F628CBA91A007B546E /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				D13023F828CBA941007B546E /* RequestProtocol.swift */,
+				D13023F828CBA941007B546E /* Request.swift */,
 				D13023FE28CBB08C007B546E /* URLRequestFactory.swift */,
 				D130240328CC7B6E007B546E /* PhotosRequest.swift */,
 			);
@@ -309,7 +312,7 @@
 		D13023F728CBA926007B546E /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				D13023FA28CBAB84007B546E /* ResponseProtocol.swift */,
+				D13023FA28CBAB84007B546E /* Response.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -346,6 +349,14 @@
 				D130241028CCA034007B546E /* NetworkError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		D130B3A728D0FB36008B4292 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D130B3A828D0FB74008B4292 /* MainViewController+Delegates.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		D16C447228C4BFEE00893AFC /* View */ = {
@@ -568,6 +579,7 @@
 			files = (
 				D12E23AF28CFAC720041E673 /* AppCordinator.swift in Sources */,
 				D12AE34928C4A2AF00090233 /* AppDelegate.swift in Sources */,
+				D130B3A928D0FB74008B4292 /* MainViewController+Delegates.swift in Sources */,
 				D13023F228CBA0BA007B546E /* Endpoint.swift in Sources */,
 				D130240E28CC9CAB007B546E /* Reachability.swift in Sources */,
 				D12AE37B28C4A5E200090233 /* PlaceholderPhoto.swift in Sources */,
@@ -586,11 +598,11 @@
 				D130240928CC8076007B546E /* DevelopmentEnvironment.swift in Sources */,
 				D198911728CDFFDB00F0D28B /* PlaceholderPhotoTableViewCellViewModel.swift in Sources */,
 				D13023F528CBA60D007B546E /* NetworkClient.swift in Sources */,
-				D13023FB28CBAB84007B546E /* ResponseProtocol.swift in Sources */,
+				D13023FB28CBAB84007B546E /* Response.swift in Sources */,
 				D12E23AD28CFAB7F0041E673 /* Coordinator.swift in Sources */,
 				D12E23B228CFC2090041E673 /* MainCoordinator.swift in Sources */,
 				D11F1CCC28D0E1B600F89CFB /* NetworkService.swift in Sources */,
-				D13023F928CBA941007B546E /* RequestProtocol.swift in Sources */,
+				D13023F928CBA941007B546E /* Request.swift in Sources */,
 				D198912528CE432400F0D28B /* DetailView.swift in Sources */,
 				D198911B28CE2D6900F0D28B /* UIImage+Color.swift in Sources */,
 				D13023EF28CB9F01007B546E /* CustomStringConvertible+Codable.swift in Sources */,
