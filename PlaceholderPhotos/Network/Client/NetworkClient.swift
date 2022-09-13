@@ -8,19 +8,15 @@
 import Foundation
 
 protocol NetworkFetch {
-  associatedtype ResponseType
-  
-  func fetch(completion: @escaping (ResponseType?, Error?) -> ())
+  func fetch<T: APIProtocol>(apiRequest: T, completion: @escaping (T.ResponseType?, Error?) -> ())
 }
 
-class NetworkClient<T: APIProtocol>: NetworkFetch {
+class NetworkClient: NetworkFetch {
 
-  let apiRequest: T
   let urlSession: URLSession
   let reachability: Reachability
 
-  init(apiRequest: T, urlSession: URLSession = .shared, reachibility: Reachability? = .none) throws {
-    self.apiRequest = apiRequest
+  init(urlSession: URLSession = .shared, reachibility: Reachability? = .none) throws {
     self.urlSession = urlSession
     if let reachibility = reachibility {
       self.reachability = reachibility
@@ -29,7 +25,7 @@ class NetworkClient<T: APIProtocol>: NetworkFetch {
     }
   }
 
-  func fetch(completion: @escaping (T.ResponseType?, Error?) -> ()) {
+  func fetch<T: APIProtocol>(apiRequest: T, completion: @escaping (T.ResponseType?, Error?) -> ()) {
     // check network status
     // guard reachability.connection == .unavailable else { return completion (.none, NetworkError.noNetworkConnection) }
     guard let request = apiRequest.request else { return completion (.none, NetworkError.invalidRequest) }
@@ -39,7 +35,7 @@ class NetworkClient<T: APIProtocol>: NetworkFetch {
       if let error = error { return completion (.none, NetworkError.error(message: error.localizedDescription)) }
       guard let data = data else { return completion (.none, NetworkError.noData) }
       do {
-        let decodedResponse = try self.apiRequest.decode(data: data)
+        let decodedResponse = try apiRequest.decode(data: data)
         completion(decodedResponse, .none)
       } catch {
         completion(.none, NetworkError.decode(message: error.localizedDescription))

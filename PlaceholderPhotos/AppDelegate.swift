@@ -11,15 +11,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  lazy var networkService = NetworkService()
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     let window = UIWindow(frame: UIScreen.main.bounds)
     self.window = window
 
-    AppCordinator(window: window).start()
+    networkService.start()
+    AppCordinator(window: window, networkService: networkService).start()
 
     return true
+  }
+
+  func applicationWillTerminate(_ application: UIApplication) {
+    networkService.stop()
   }
 
   // MARK: UISceneSession Lifecycle

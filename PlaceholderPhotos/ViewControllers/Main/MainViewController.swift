@@ -44,25 +44,28 @@ class MainViewController: UIViewController {
 
     // Do any additional setup after loading the view.
     initplaceholderPhotoListView()
-    fetchPhotos()
+    fetchPhotos { [weak self] in
+      guard let self = self else { return }
+      self.transitionToTableView()
+    }
   }
 
   func fetchPhotos(completion: (() -> ())? = .none) {
-    try? mainViewModel.photos { [weak self] in
-      guard let self = self else { return }
+    mainViewModel.photos { [weak self] result, error in
+      if let error = error { print(error) } // TODO: Show error
+      guard let self = self, result else { return }
+      print("Fetched \(self.mainViewModel.placeholderPhotos.count) placeholder photos.")
       DispatchQueue.main.async { [weak self] in
         guard let self = self else { return }
         self.reloadTable()
-        self.transitionToTableView {
-          completion?()
-        }
+        completion?()
       }
     }
   }
 }
 
 extension MainViewController {
-  private func transitionToTableView(completion: (() -> ())?) {
+  private func transitionToTableView(completion: (() -> ())? = .none) {
     UIView.transition(with: self.view, duration: 0.3, options: .transitionCrossDissolve, animations: {
       self.placeholderPhotoListView?.isHidden = false
       self.emptyView?.isHidden = true
@@ -119,6 +122,6 @@ extension MainViewController: PlaceholderPhotoListViewDelegate {
 
   func placeholderPhotoListView(view: PlaceholderPhotoListView, refreshControlValueChanged: UIRefreshControl) {
     refreshControlValueChanged.endRefreshing()
-    reloadTable()
+    fetchPhotos()
   }
 }

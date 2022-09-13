@@ -7,18 +7,19 @@
 
 import Foundation
 
-class PhotosAPI {
-  
-  func photos(completion: @escaping ([PlaceholderPhoto]) -> ()) throws {
+class PhotosAPI: NetworkAPI {
+
+  private var networkClient: NetworkClient
+
+  required init(client: NetworkClient) {
+    self.networkClient = client
+  }
+
+  func photos(completion: @escaping ([PlaceholderPhoto]?, Error?) -> ()) {
     let photosRequest = PhotosRequest()
 
-    try? NetworkClient(apiRequest: photosRequest).fetch { photos, error in
-      if let error = error {
-        print(error)
-      }
-      else {
-        if let photos = photos { completion(photos) } // Error if .none
-      }
+    networkClient.fetch(apiRequest: photosRequest) { photos, error in
+      completion(photos, error)
     }
   }
 }

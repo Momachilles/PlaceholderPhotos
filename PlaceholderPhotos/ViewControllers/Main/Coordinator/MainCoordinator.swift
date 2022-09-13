@@ -13,12 +13,16 @@ class MainCoordinator: Coordinator {
   var parentCoordinator: Coordinator?
   var children: [Coordinator] = []
 
-  init(navigationController: UINavigationController) {
+  private let networkService: NetworkService
+
+  init(navigationController: UINavigationController, networkService: NetworkService) {
     self.navigationController = navigationController
+    self.networkService = networkService
   }
 
   func start() {
-    let mainViewController = MainViewController(viewModel: MainViewModel(coordinator: self))
+    guard let networkClient = networkService.networkClient else { return }
+    let mainViewController = MainViewController(viewModel: MainViewModel(coordinator: self, networkClient: networkClient))
     navigationController.pushViewController(mainViewController, animated: false)
   }
 }
