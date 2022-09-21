@@ -23,7 +23,7 @@ extension PlaceholderPhotosFactory {
     }
 
     for i in 1...length {
-      placeholderPhotos?.append(PlaceholderPhoto(title: "Title", url: "http:///host/path", thumbnailUrl: "http:///host/path/thumb"))
+      placeholderPhotos?.append(PlaceholderPhoto(title: "Title-\(i)", url: "http:///host/path/\(i)", thumbnailUrl: "http:///host/path/thumb-\(i)"))
     }
 
     return placeholderPhotos
