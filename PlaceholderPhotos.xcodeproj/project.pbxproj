@@ -13,7 +13,6 @@
 		D12AE34B28C4A2AF00090233 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE34A28C4A2AF00090233 /* SceneDelegate.swift */; };
 		D12AE35228C4A2B400090233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D12AE35128C4A2B400090233 /* Assets.xcassets */; };
 		D12AE35528C4A2B400090233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12AE35328C4A2B400090233 /* LaunchScreen.storyboard */; };
-		D12AE36028C4A2B400090233 /* PlaceholderPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE35F28C4A2B400090233 /* PlaceholderPhotosTests.swift */; };
 		D12AE36A28C4A2B400090233 /* PlaceholderPhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE36928C4A2B400090233 /* PlaceholderPhotosUITests.swift */; };
 		D12AE36C28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE36B28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift */; };
 		D12AE37B28C4A5E200090233 /* PlaceholderPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AE37A28C4A5E200090233 /* PlaceholderPhoto.swift */; };
@@ -85,7 +84,6 @@
 		D12AE35428C4A2B400090233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D12AE35628C4A2B400090233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D12AE35B28C4A2B400090233 /* PlaceholderPhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceholderPhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D12AE35F28C4A2B400090233 /* PlaceholderPhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotosTests.swift; sourceTree = "<group>"; };
 		D12AE36528C4A2B400090233 /* PlaceholderPhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceholderPhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12AE36928C4A2B400090233 /* PlaceholderPhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotosUITests.swift; sourceTree = "<group>"; };
 		D12AE36B28C4A2B400090233 /* PlaceholderPhotosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPhotosUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 			children = (
 				D13B1DDA28DB52D300E5D66D /* Factory */,
 				D13B1DD128DB1E1800E5D66D /* Network */,
-				D12AE35F28C4A2B400090233 /* PlaceholderPhotosTests.swift */,
 			);
 			path = PlaceholderPhotosTests;
 			sourceTree = "<group>";
@@ -664,7 +661,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D12AE36028C4A2B400090233 /* PlaceholderPhotosTests.swift in Sources */,
 				D13B1DD928DB519C00E5D66D /* URLSessionFactory.swift in Sources */,
 				D13B1DD528DB1EEF00E5D66D /* URLProtocolStub.swift in Sources */,
 				D13B1DDC28DB540800E5D66D /* PlaceholderPhotosFactory.swift in Sources */,
@@ -759,7 +755,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -814,7 +810,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -928,6 +924,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N74TV576H8;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.dag.ios.PlaceholderPhotosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -946,6 +943,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N74TV576H8;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.dag.ios.PlaceholderPhotosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
