@@ -33,7 +33,9 @@ class NetworkClient: NetworkFetch {
     // do session task
     urlSession.dataTask(with: request) { data, response, error in
       if let error = error { return completion (.none, NetworkError.error(message: error.localizedDescription)) }
-      guard let data = data else { return completion (.none, NetworkError.noData) }
+      guard let response = response as? HTTPURLResponse else { return completion(.none, NetworkError.invalidResponse) }
+      guard 200 ..< 300 ~= response.statusCode else { return completion(.none, NetworkError.status(status: String(response.statusCode))) }
+      guard let data = data, data.count > 0 else { return completion (.none, NetworkError.noData) }
       do {
         let decodedResponse = try apiRequest.decode(data: data)
         completion(decodedResponse, .none)
